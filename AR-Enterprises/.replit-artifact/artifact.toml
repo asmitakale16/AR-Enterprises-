@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "AR Enterprises Corporate Website"
+version = "1.0.0"
+id = "artifacts/ar-enterprises"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18425
+
+[services.development]
+run = "pnpm --filter @workspace/ar-enterprises run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ar-enterprises", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ar-enterprises/dist"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18425"
+BASE_PATH = "/"
