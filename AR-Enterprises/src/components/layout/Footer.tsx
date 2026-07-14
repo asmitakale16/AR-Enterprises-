@@ -11,10 +11,10 @@ export function Footer() {
             AR<span className="text-secondary">.</span>
            </span>
 
-           <span className="text-xs font-semibold tracking-[0.2em] uppercase opacity-70 block text-white">
+           <span className="block text-xs font-semibold tracking-[0.2em] uppercase text-white">
             Enterprises
-            </span>
-            </Link>
+           </span>
+           </Link>
             <p className="text-primary-foreground/80 dark:text-muted-foreground text-sm max-w-sm leading-relaxed mb-6">
               Your Trusted HR Partner for Skilled Industrial Talent. Delivering focused talent acquisition and HR outsourcing solutions for OEMs and SMEs since 2026.
             </p>
