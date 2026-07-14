@@ -6,14 +6,15 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-2">
-            <Link href="/" className="inline-block mb-4">
-              <span className="font-serif text-2xl font-bold tracking-tight">
-                AR<span className="text-secondary dark:text-accent">.</span>
-              </span>
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase opacity-70 block">
-                Enterprises
-              </span>
-            </Link>
+           <Link href="/" className="inline-block mb-4">
+           <span className="font-serif text-2xl font-bold tracking-tight text-black dark:text-white">
+            AR<span className="text-secondary dark:text-accent">.</span>
+            </span>
+
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase opacity-70 block text-black dark:text-white">
+            Enterprises
+            </span>
+           </Link>
             <p className="text-primary-foreground/80 dark:text-muted-foreground text-sm max-w-sm leading-relaxed mb-6">
               Your Trusted HR Partner for Skilled Industrial Talent. Delivering focused talent acquisition and HR outsourcing solutions for OEMs and SMEs since 2026.
             </p>
