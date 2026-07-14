@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import sunilKaleImage from "../assets/sunil-kale.png";
 
 export default function Leadership() {
   const timelineEvents = [
@@ -20,23 +21,27 @@ export default function Leadership() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-20 items-center">
 
-            {/* Avatar card */}
-            <motion.div
-              className="lg:col-span-5 relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
-            >
-              <div className="aspect-[4/5] max-h-[420px] lg:max-h-none bg-muted/40 rounded-sm border border-border relative overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/10 via-background to-background" />
-                <div className="text-6xl sm:text-8xl font-serif font-bold text-muted-foreground/20 absolute bottom-4 right-4 leading-none select-none">
-                  SK
-                </div>
-                <div className="absolute top-8 -left-4 w-16 sm:w-20 h-1 bg-secondary dark:bg-accent" />
-                <div className="absolute -bottom-4 right-8 w-1 h-24 sm:h-32 bg-primary/20 dark:bg-primary/50" />
-              </div>
-            </motion.div>
+         {/* Avatar card */}
+         <motion.div
+         className="lg:col-span-5 relative"
+         initial={{ opacity: 0, scale: 0.95 }}
+         animate={{ opacity: 1, scale: 1 }}
+         transition={{ duration: 0.7 }}
+         >
+         <div className="aspect-[4/5] max-h-[420px] lg:max-h-none rounded-sm border border-border relative overflow-hidden">
 
+         <img
+         src={sunilKaleImage}
+         alt="Mr. Sunil Kale - Founder"
+         className="w-full h-full object-cover object-top"
+          />
+
+          <div className="absolute top-8 -left-4 w-16 sm:w-20 h-1 bg-secondary dark:bg-accent" />
+
+          <div className="absolute -bottom-4 right-8 w-1 h-24 sm:h-32 bg-primary/20 dark:bg-primary/50" />
+
+          </div>
+          </motion.div>
             {/* Bio */}
             <motion.div
               className="lg:col-span-7"
