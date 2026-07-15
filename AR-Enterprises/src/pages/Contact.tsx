@@ -54,10 +54,10 @@ export default function Contact() {
             </h2>
 
             <form
-            className="space-y-5 md:space-y-6"
             action="https://formsubmit.co/sunil.kale400@gmail.com"
             method="POST"
-    >
+            className="space-y-5 md:space-y-6"
+            >
 
       {/* FormSubmit Configuration */}
       <input 
@@ -81,14 +81,28 @@ export default function Contact() {
 
       {/* Name + Company */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        <div className="space-y-2">
+        <label htmlFor="email" className="text-sm font-medium text-foreground">
+        Email
+        </label>
+
+         <input
+         type="email"
+         id="email"
+         name="Email"
+         required
+         className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+         placeholder="john@example.com"
+         />
+         </div>
 
         <div className="space-y-2">
           <label 
             htmlFor="name" 
             className="text-sm font-medium text-foreground"
-          >
+            >
             Full Name
-          </label>
+            </label>
 
           <input
             type="text"
