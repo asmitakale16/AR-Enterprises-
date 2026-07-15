@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
+  
   const clients = [
-    "SINAI ENGINEERING (INAI)",
+    "SINAI ENGINEERING (SINAI)",
     "KLEEN GREEN TECHNOLOGIES",
     "ALFA PLAST",
+    "CINAI AUTOTECH PRIVATE LIMITED",
     "AQUATECH SYSTEMS",
     "KALPTECH",
   ];
@@ -41,71 +43,174 @@ export default function Contact() {
 
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
             >
-              <div className="bg-card p-5 sm:p-7 md:p-8 rounded-xl border border-border shadow-sm">
-                <h2 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-5 md:mb-6">Send a Message</h2>
-                <form className="space-y-5 md:space-y-6" onSubmit={(e) => e.preventDefault()}>
-                  {/* Name + Company row: stacked on mobile, side-by-side on sm+ */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium text-foreground">Full Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors"
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="company" className="text-sm font-medium text-foreground">Company</label>
-                      <input
-                        type="text"
-                        id="company"
-                        className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors"
-                        placeholder="Organization Name"
-                      />
-                    </div>
-                  </div>
+            <div className="bg-card p-5 sm:p-7 md:p-8 rounded-xl border border-border shadow-sm">
 
-                  <div className="space-y-2">
-                    <label htmlFor="service" className="text-sm font-medium text-foreground">Service Needed</label>
-                    <select
-                      id="service"
-                      className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors"
-                      defaultValue=""
-                    >
-                      <option value="" disabled>Select an option</option>
-                      <option value="executive_search">Executive Search</option>
-                      <option value="board_services">Board Services</option>
-                      <option value="hr_advisory">HR Advisory</option>
-                      <option value="global_talent">Global Talent Sourcing</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
+            <h2 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-5 md:mb-6">
+            Send a Message
+            </h2>
 
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="flex w-full rounded-md border border-input bg-background px-3 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors resize-none min-h-[120px]"
-                      placeholder="How can we help you?"
-                    />
-                  </div>
+            <form
+            className="space-y-5 md:space-y-6"
+            action="https://formsubmit.co/sunil.kale400@gmail.com"
+            method="POST"
+    >
 
-                  <button
-                    type="button"
-                    className="w-full inline-flex items-center justify-center rounded-sm text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 min-h-[52px] h-13 px-8 gap-2"
-                  >
-                    Send Inquiry
-                    <Send className="w-4 h-4" />
-                  </button>
-                </form>
-              </div>
-            </motion.div>
+      {/* FormSubmit Configuration */}
+      <input 
+        type="hidden" 
+        name="_subject" 
+        value="New Inquiry from Website" 
+      />
+
+      <input 
+        type="hidden" 
+        name="_captcha" 
+        value="false" 
+      />
+
+      <input 
+        type="hidden" 
+        name="_template" 
+        value="table" 
+      />
+
+
+      {/* Name + Company */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+        <div className="space-y-2">
+          <label 
+            htmlFor="name" 
+            className="text-sm font-medium text-foreground"
+          >
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="Full Name"
+            required
+            className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+            placeholder="John Doe"
+          />
+        </div>
+
+
+        <div className="space-y-2">
+          <label 
+            htmlFor="company" 
+            className="text-sm font-medium text-foreground"
+          >
+            Company
+          </label>
+
+          <input
+            type="text"
+            id="company"
+            name="Company"
+            className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+            placeholder="Organization Name"
+          />
+        </div>
+
+      </div>
+
+
+      {/* Service */}
+      <div className="space-y-2">
+
+        <label 
+          htmlFor="service" 
+          className="text-sm font-medium text-foreground"
+        >
+          Service Needed
+        </label>
+
+
+        <select
+          id="service"
+          name="Service Needed"
+          required
+          defaultValue=""
+          className="flex min-h-[48px] h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+        >
+
+          <option value="" disabled>
+            Select an option
+          </option>
+
+          <option value="Executive Search">
+            Executive Search
+          </option>
+
+          <option value="Board Services">
+            Board Services
+          </option>
+
+          <option value="HR Advisory">
+            HR Advisory
+          </option>
+
+          <option value="Global Talent Sourcing">
+            Global Talent Sourcing
+          </option>
+
+          <option value="Other">
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+
+
+      {/* Message */}
+      <div className="space-y-2">
+
+        <label 
+          htmlFor="message" 
+          className="text-sm font-medium text-foreground"
+        >
+          Message
+        </label>
+
+
+        <textarea
+          id="message"
+          name="Message"
+          rows={5}
+          className="flex w-full rounded-md border border-input bg-background px-3 py-3 text-sm resize-none min-h-[120px]"
+          placeholder="How can we help you?"
+        />
+
+      </div>
+
+
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full inline-flex items-center justify-center rounded-sm text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 min-h-[52px] px-8 gap-2"
+      >
+
+        Send Inquiry
+
+        <Send className="w-4 h-4" />
+
+      </button>
+
+
+    </form>
+
+  </div>
+
+</motion.div>
 
             {/* Contact Details */}
             <motion.div
@@ -161,9 +266,9 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Confidentiality card — hidden on mobile only, visible sm+ */}
-              <div className="hidden sm:block p-6 sm:p-8 bg-primary text-primary-foreground dark:bg-card dark:border dark:border-border rounded-lg relative overflow-hidden">
-                <div className="absolute -right-4 -bottom-4 opacity-10">
+              {/* Confidentiality Card — Forced white text across dark & light modes */}
+              <div className="hidden sm:block p-6 sm:p-8 bg-slate-900 text-white dark:bg-slate-900 dark:text-white rounded-lg relative overflow-hidden shadow-md">
+                <div className="absolute -right-4 -bottom-4 opacity-15 text-white">
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                     <polyline points="14 2 14 8 20 8" />
@@ -171,8 +276,8 @@ export default function Contact() {
                     <line x1="16" y1="17" x2="8" y2="17" />
                   </svg>
                 </div>
-                <h3 className="font-serif text-lg sm:text-xl font-bold mb-2">Confidentiality Assured</h3>
-                <p className="text-primary-foreground/80 dark:text-muted-foreground text-sm leading-relaxed">
+                <h3 className="font-serif text-lg sm:text-xl font-bold mb-2 text-white">Confidentiality Assured</h3>
+                <p className="text-slate-200 text-sm leading-relaxed">
                   We maintain strict confidentiality in all our searches and advisory engagements. Your information is secure with us.
                 </p>
               </div>
@@ -191,13 +296,6 @@ export default function Contact() {
             <p className="text-muted-foreground text-base sm:text-lg">Trusted by leading industrial organizations across sectors.</p>
           </div>
 
-          {/*
-            Grid:
-            Mobile  (default) : 1 column
-            Tablet  (sm)      : 2 columns
-            Tablet+ (md)      : 3 columns
-            Laptop  (lg)      : 5 columns — one per client, all in a single row
-          */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
             {clients.map((client, i) => (
               <motion.div
