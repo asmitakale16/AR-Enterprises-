@@ -21,7 +21,7 @@ export default function Contact() {
 
 
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
     e.preventDefault();
 
@@ -238,28 +238,23 @@ export default function Contact() {
               <label className="text-sm font-medium">
                 Phone
               </label>
-
-
               <input
+              type="tel"
+              required
+              value={formData.phone}
 
-                type="tel"
+              onChange={(e)=>
+              setFormData({
+              ...formData,
+              phone:e.target.value
+              })
+             }
 
-                value={formData.phone}
+              className="flex h-12 w-full rounded-md border px-3"
 
-                onChange={(e)=>
-                  setFormData({
-                    ...formData,
-                    phone:e.target.value
-                  })
-                }
-
-
-                className="flex h-12 w-full rounded-md border px-3"
-
-                placeholder="+91 XXXXX XXXXX"
+              placeholder="+91 XXXXX XXXXX"
 
               />
-
 
               </div>
 
@@ -284,7 +279,6 @@ export default function Contact() {
                 type="text"
 
                 value={formData.company}
-
                 onChange={(e)=>
                   setFormData({
                     ...formData,
@@ -391,7 +385,7 @@ export default function Contact() {
 
               <textarea
 
-                rows="5"
+                rows={5}
 
                 value={formData.message}
 
