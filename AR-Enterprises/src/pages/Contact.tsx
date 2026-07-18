@@ -304,114 +304,75 @@ export default function Contact() {
 
               {/* Service */}
 
+             <div className="space-y-2">
 
-              <div className="space-y-2">
+             <label className="text-sm font-medium">
+              Service Needed
+             </label>
 
+             <select
+             required
+             value={formData.service}
+             onChange={(e) =>
+             setFormData({
+             ...formData,
+              service: e.target.value
+             })
+             }
+             className="flex h-12 w-full rounded-md border px-3 bg-white text-black dark:bg-black dark:text-white dark:border-gray-700"
+             >
 
-              <label className="text-sm font-medium">
-                Service Needed
-              </label>
+             <option 
+             value="" 
+             className="bg-white text-black dark:bg-black dark:text-white"
+             >
+             Select an option
+             </option>
 
+             <option className="bg-white text-black dark:bg-black dark:text-white">
+             Executive Search
+             </option>
 
-              <select
+             <option className="bg-white text-black dark:bg-black dark:text-white">
+             Board Services
+             </option>
 
-                required
+             <option className="bg-white text-black dark:bg-black dark:text-white">
+             HR Advisory
+             </option>
 
-                value={formData.service}
+             <option className="bg-white text-black dark:bg-black dark:text-white">
+             Global Talent Sourcing
+             </option>
 
-                onChange={(e)=>
-                  setFormData({
-                    ...formData,
-                    service:e.target.value
-                  })
-                }
-
-
-                className="flex h-12 w-full rounded-md border border-gray-300 px-3 bg-transparent text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-
-              >
-
-
-              <option value="">
-                Select an option
-              </option>
-
-
-              <option>
-                Executive Search
-              </option>
-
-
-              <option>
-                Board Services
-              </option>
-
-
-              <option>
-                HR Advisory
-              </option>
-
-
-              <option>
-                Global Talent Sourcing
-              </option>
-
-
-              <option>
-                Other
-              </option>
-
+             <option className="bg-white text-black dark:bg-black dark:text-white">
+              Other
+             </option>
 
               </select>
 
-
               </div>
-
-
-
-
-
-
               {/* Message */}
-
-
               <div className="space-y-2">
 
-
               <label className="text-sm font-medium">
-                Message
-              </label>
+              Message
+             </label>
+             <textarea
+             rows={5}
+             value={formData.message}
+             onChange={(e) =>
+             setFormData({
+             ...formData,
+             message: e.target.value
+             })
 
-
-              <textarea
-
-                rows={5}
-
-                value={formData.message}
-
-                onChange={(e)=>
-                  setFormData({
-                    ...formData,
-                    message:e.target.value
-                  })
-                }
-
-
-                className="w-full rounded-md border px-3 py-3"
-
-
-                placeholder="How can we help you?"
-
+             }
+             className="w-full rounded-md border px-3 py-3 bg-white text-black dark:bg-black dark:text-white dark:border-gray-700"
+             placeholder="How can we help you?"
               />
 
               </div>
-
-
-
-
-
-
-
               <button
 
                 type="submit"
@@ -438,11 +399,6 @@ export default function Contact() {
 
 
             </motion.div>
-
-
-
-
-
 
 
             {/* CONTACT DETAILS */}
