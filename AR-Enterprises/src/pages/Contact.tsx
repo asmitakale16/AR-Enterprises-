@@ -327,7 +327,7 @@ export default function Contact() {
                 }
 
 
-                className="flex h-12 w-full rounded-md border px-3"
+                className="flex h-12 w-full rounded-md border border-gray-300 px-3 bg-transparent text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
 
               >
 
